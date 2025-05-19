@@ -10,11 +10,11 @@ session_start();
 
 date_default_timezone_set("Africa/Lagos");
 
-
-$url='https://oscetoolbox.com/';
+// Demo / Prod
+$url='http://127.0.0.1/projects/OSCE-Toolbox/osce/';
 if ($_SERVER['SERVER_NAME']=='localhost') {
 	$url='http://localhost/osce/osce/';
-	$conn = new mysqli('localhost', 'root', '', 'osce');
+	$conn = new mysqli('localhost', 'root', '', 'oscedb');
 }else{
 	$conn = new mysqli('localhost', 'root', '', 'oscedb');
 }
