@@ -172,7 +172,7 @@ require_once "header.php"; ?>
               <div class="streak-avatar-row">
                 <?php
                 $day_before = date("Y-m-d", strtotime("-2 days"));
-                $streak_board = mysqli_query($conn, "SELECT * FROM daily_streak WHERE last_date>'$day_before' ORDER BY streak_count DESC LIMIT 4");
+                $streak_board = mysqli_query($conn, "SELECT * FROM daily_streak WHERE last_date>'$day_before' ORDER BY streak_count DESC LIMIT 3");
                 $user_info = mysqli_query($conn, "SELECT * FROM user_info");
                 if ($streak_board && mysqli_num_rows($streak_board) > 0) {
                   $profiles = [];
